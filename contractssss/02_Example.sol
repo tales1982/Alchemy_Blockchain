@@ -5,12 +5,15 @@ import "forge-std/console.sol";
 
 contract Example{
 
-    uint8 a;          // 0 -> 255
+    uint8 a = 255;          // 0 -> 255
     uint256 b;        // 0 -> 2^256 - 1 alias uint
 
     int8 c;           // -128 -> 127
     int256 d;         // -2^255 -> 2^255 - 1 alias int256
 
+    constructor() {
+        a += 1;
+    }
 
     bool myCondition = true;
 
